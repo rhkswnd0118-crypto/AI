@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>젠슨황 이재용 엔비디아 - 중간발표</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: url('header-bg.png') center/contain no-repeat;
+            background-color: #f5f7fa;
+            color: white;
+            padding: 0;
+            text-align: center;
+            min-height: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header h1 {
+            display: none;
+        }
+
+        .header p {
+            display: none;
+        }
+
+        .section {
+            padding: 50px 40px;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .section:last-of-type {
+            border-bottom: none;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            font-size: 1.8em;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 25px;
+        }
+
+        .section-title::before {
+            content: '';
+            display: inline-block;
+            width: 5px;
+            height: 30px;
+            background: #3498db;
+            margin-right: 15px;
+            border-radius: 3px;
+        }
+
+        .section-content {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .game-space {
+            background: #f8f9fa;
+            padding: 40px;
+            text-align: center;
+            min-height: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-top: 2px dashed #3498db;
+        }
+
+        .game-space h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .game-placeholder {
+            width: 100%;
+            height: 500px;
+            background: white;
+            border: 2px dashed #bdc3c7;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #95a5a6;
+            font-size: 1.1em;
+            margin-top: 20px;
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 30px 40px;
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 0.95em;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 40px 25px;
+            }
+
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .section {
+                padding: 30px 25px;
+            }
+
+            .section-title {
+                font-size: 1.4em;
+            }
+
+            .section-content {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 헤더 -->
+        <div class="header">
+            <h1>🏠 젠슨황 이재용 엔비디아</h1>
+            <p>일룸 AI 소모임 중간발표 | 2026.03.18</p>
+        </div>
+
+        <!-- 소모임 목적 -->
+        <div class="section">
+            <h2 class="section-title">소모임 목적 및 구성원 소개</h2>
+            <div class="section-content">
+                <span style="font-size: 1.3em; font-weight: 600; color: #e74c3c;">🔥 3대 거물들을 뛰어넘는 AI인재가 되기 위함 🔥</span>
+            </div>
+            <!-- 구성원 소개 -->
+            <div style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #3498db;">
+                <p style="font-weight: 600; color: #2c3e50; margin-bottom: 15px; font-size: 1.05em;">🌟 우리 팀을 이끌어가는 AI 챔피언들</p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div style="padding: 12px; background: white; border-radius: 6px; border: 1px solid #e9ecef;">
+                        <span style="font-weight: 600; color: #e74c3c;">👑 리더</span><br>
+                        <span style="color: #555; font-size: 0.9em;">최지연</span>
+                        <span style="color: #7f8c8d; font-size: 0.85em; display: block; margin-top: 3px;">리테일사업팀</span>
+                    </div>
+                    <div style="padding: 12px; background: white; border-radius: 6px; border: 1px solid #e9ecef;">
+                        <span style="font-weight: 600; color: #3498db;">⭐ 구성원 1</span><br>
+                        <span style="color: #555; font-size: 0.9em;">김선우</span>
+                        <span style="color: #7f8c8d; font-size: 0.85em; display: block; margin-top: 3px;">영업효율개선팀</span>
+                    </div>
+                    <div style="padding: 12px; background: white; border-radius: 6px; border: 1px solid #e9ecef;">
+                        <span style="font-weight: 600; color: #3498db;">⭐ 구성원 2</span><br>
+                        <span style="color: #555; font-size: 0.9em;">박상그레</span>
+                        <span style="color: #7f8c8d; font-size: 0.85em; display: block; margin-top: 3px;">고객문제정의팀</span>
+                    </div>
+                    <div style="padding: 12px; background: white; border-radius: 6px; border: 1px solid #e9ecef;">
+                        <span style="font-weight: 600; color: #3498db;">⭐ 구성원 3</span><br>
+                        <span style="color: #555; font-size: 0.9em;">민재윤</span>
+                        <span style="color: #7f8c8d; font-size: 0.85em; display: block; margin-top: 3px;">유통경쟁력강화팀</span>
+                    </div>
+                    <div style="padding: 12px; background: white; border-radius: 6px; border: 1px solid #e9ecef;">
+                        <span style="font-weight: 600; color: #3498db;">⭐ 구성원 4</span><br>
+                        <span style="color: #555; font-size: 0.9em;">윤관중</span>
+                        <span style="color: #7f8c8d; font-size: 0.85em; display: block; margin-top: 3px;">유통경쟁력강화팀</span>
+                    </div>
+                    <div style="padding: 12px; background: white; border-radius: 6px; border: 1px solid #e9ecef;">
+                        <span style="font-weight: 600; color: #3498db;">⭐ 구성원 5</span><br>
+                        <span style="color: #555; font-size: 0.9em;">채혜주</span>
+                        <span style="color: #7f8c8d; font-size: 0.85em; display: block; margin-top: 3px;">고객문제정의팀</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 현재 진행 상황 -->
+        <div class="section">
+            <h2 class="section-title">현재 진행 상황</h2>
+            <div class="section-content">
+                AI 기초 지식을 쌓기 위해 AI 프롬프트 활용능력 1급 자격증 시험공부를 함께 진행했고<br><br>
+                <span style="font-size: 1.3em; font-weight: 700; color: #f39c12;">⭐ AI 프롬프트 활용능력 1급 응시인원 5명 전원 합격하는 쾌거 !! ⭐</span>
+            </div>
+            <!-- 사진 갤러리 -->
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 30px;">
+                <!-- 1번 (6번 사진) -->
+                <div style="text-align: center;">
+                    <img src="genson6.jpg" alt="1번" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 10px;">
+                    <div style="min-height: 60px; border: 1px solid #e9ecef; border-radius: 6px; padding: 10px; background: #fafafa; color: #555; font-size: 0.9em; line-height: 1.5; text-align: left;">
+                        우리는 이미 3대 거물을 뛰어넘는 길에 접어들었다! 🔥
+                    </div>
+                </div>
+                <!-- 2번 (1번 사진) -->
+                <div style="text-align: center;">
+                    <img src="genson1.jpg" alt="2번" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 10px;">
+                    <div style="min-height: 60px; border: 1px solid #e9ecef; border-radius: 6px; padding: 10px; background: #fafafa; color: #555; font-size: 0.9em; line-height: 1.5; text-align: left;">
+                        자격증 따는 게 아니라 우리의 AI 인생이 달라지는 중! 🎓
+                    </div>
+                </div>
+                <!-- 3번 (2번 사진) -->
+                <div style="text-align: center;">
+                    <img src="genson2.jpg" alt="3번" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 10px;">
+                    <div style="min-height: 60px; border: 1px solid #e9ecef; border-radius: 6px; padding: 10px; background: #fafafa; color: #555; font-size: 0.9em; line-height: 1.5; text-align: left;">
+                        ☕ 커피 한잔의 여유를 아는 품격있는리더 !!
+                    </div>
+                </div>
+                <!-- 4번 (3번 사진) -->
+                <div style="text-align: center;">
+                    <img src="genson3.jpg" alt="4번" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 10px;">
+                    <div style="min-height: 60px; border: 1px solid #e9ecef; border-radius: 6px; padding: 10px; background: #fafafa; color: #555; font-size: 0.9em; line-height: 1.5; text-align: left;">
+                        🎯 드디어 시험장이다 !!!!!!
+                    </div>
+                </div>
+                <!-- 5번 (4번 사진) -->
+                <div style="text-align: center;">
+                    <img src="genson4.jpg" alt="5번" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 10px;">
+                    <div style="min-height: 60px; border: 1px solid #e9ecef; border-radius: 6px; padding: 10px; background: #fafafa; color: #555; font-size: 0.9em; line-height: 1.5; text-align: left;">
+                        💨 가즈아 두근두근
+                    </div>
+                </div>
+                <!-- 6번 (5번 사진) -->
+                <div style="text-align: center;">
+                    <img src="genson5.jpg" alt="6번" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 10px;">
+                    <div style="min-height: 60px; border: 1px solid #e9ecef; border-radius: 6px; padding: 10px; background: #fafafa; color: #555; font-size: 0.9em; line-height: 1.5; text-align: left;">
+                        😎 ㅎㅎㅎ 나한텐  너무 쉬운데요 ㅎㅎㅎ?
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 향후 결과물 계획 -->
+        <div class="section">
+            <h2 class="section-title">향후 결과물 계획</h2>
+            <div class="section-content" style="font-size: 1.05em;">
+                <p style="margin-bottom: 15px; line-height: 1.8;">
+                    바이브코딩 강의를 통해 AI 기반 데이터 분석의 실전 기술을 습득하고,
+                </p>
+                <span style="font-size: 1.2em; font-weight: 700; color: #e74c3c; display: block; margin: 20px 0; text-align: center;">
+                    💡 모두가 쓸 수 있는 통합 대시보드 만들기 💡
+                </span>
+                <p style="margin-top: 15px; line-height: 1.8;">
+                    6개 팀이 함께 만드는 만큼,
+                    <span style="font-weight: 600; color: #3498db;">모든 팀이 필요한 데이터를 한곳에서 확인</span>할 수 있는
+                    <span style="font-weight: 600; color: #e74c3c;">누구나 쓸 수 있고, 모두가 도움이 되는 대시보드</span>를 완성하고,<br>
+                    이를 실제 업무에 적용해서 <span style="font-weight: 600;">일룸 전체의 업무 효율을 높일 거예요! 🎯</span>
+                </p>
+            </div>
+        </div>
+
+        <!-- 게임 공간 -->
+        <div class="game-space">
+            <h2 style="font-size: 2.2em; color: #e74c3c; font-weight: 800; margin-bottom: 10px;">🎮 발표자 응원하기</h2>
+            <p style="color: #e74c3c; margin-bottom: 15px; font-size: 1.2em; font-weight: 600;">🔥 소모임의 응원 열정!!! 🔥</p>
+            <p style="color: #7f8c8d; margin-bottom: 20px;">게임으로 발표자를 응원해주세요!</p>
+            <iframe
+                src="https://client-sand-eight-36.vercel.app"
+                width="100%"
+                height="600px"
+                frameborder="0"
+                allow="fullscreen"
+                style="border-radius: 8px; margin-top: 20px;"
+            ></iframe>
+        </div>
+
+        <!-- 푸터 -->
+        <div class="footer">
+            <p>💡 일룸 AI 인재 양성 프로젝트 | Do Better Things</p>
+        </div>
+    </div>
+</body>
+</html>
